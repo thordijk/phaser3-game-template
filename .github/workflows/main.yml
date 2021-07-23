@@ -30,7 +30,7 @@ jobs:
 
       - name: Run the install and the build
         run: |
-          npm ci,
+          npm ci
           npm run build
       
       - name: Deploy 🚀
