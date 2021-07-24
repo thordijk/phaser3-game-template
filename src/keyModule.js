@@ -1,4 +1,4 @@
-export default () => ({
+export default () => JSON.parse(localStorage.getItem('capacadeKeys')) || {
   p1Up: 'W',
   p1Down: 'S',
   p1Left: 'A',
@@ -19,4 +19,8 @@ export default () => ({
   p2A: 'B',
   p2RB: 'N',
   p2LB: 'M',
-});
+  pinBallL: 'Z',
+  pinBallR: 'X',
+  onePlayer: 'Q',
+  twoPlayers: 'U',
+};
