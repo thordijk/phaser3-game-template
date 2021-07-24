@@ -2,6 +2,7 @@ import Phaser from 'phaser';
 import playerImg from '../assets/img/player.png';
 import ground from '../assets/img/ground.png';
 import bg from '../assets/img/bg.png';
+import getKeys from '../keyModule';
 
 export default class playTheGame extends Phaser.Scene {
   constructor() {
@@ -26,18 +27,18 @@ export default class playTheGame extends Phaser.Scene {
       platforms.create(70 * i, 530, 'ground').setOrigin(0, 0).refreshBody();
     }
     this.physics.add.collider(this.player, platforms);
+    this.keys = this.input.keyboard.addKeys(getKeys());
   }
 
   update() {
-    const cursors = this.input.keyboard.createCursorKeys();
-    if (cursors.left.isDown) {
+    if (this.keys.p1Left.isDown) {
       this.player.setVelocityX(-160);
-    } else if (cursors.right.isDown) {
+    } else if (this.keys.p1Right.isDown) {
       this.player.setVelocityX(160);
     } else {
       this.player.setVelocityX(0);
     }
-    if (cursors.up.isDown && this.player.body.touching.down) {
+    if (this.keys.p1Up.isDown && this.player.body.touching.down) {
       this.player.setVelocityY(-390);
     }
   }
