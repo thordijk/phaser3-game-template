@@ -1,8 +1,8 @@
 import Phaser from 'phaser';
+import getKeys from '@capacade/arcadekeymap';
 import playerImg from '../assets/img/player.png';
 import ground from '../assets/img/ground.png';
 import bg from '../assets/img/bg.png';
-import getKeys from '../keyModule';
 
 export default class playTheGame extends Phaser.Scene {
   constructor() {

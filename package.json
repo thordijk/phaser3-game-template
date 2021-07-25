@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/capAcade/phaser3-game-template#readme",
   "dependencies": {
+    "@capacade/arcadekeymap": "^1.0.0",
     "phaser": "^3.55.2"
   },
   "devDependencies": {
